@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS & BOOTSTRAP -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="_css/style.css">  
+  <title>Agencia de Turismo - Pacotes Promocionais</title>
+</head>
+<body>
+  <header>
+    <!--Logo-->
+    <div class="div_logo">
+      <img src="_imagens/Logo.png" alt="Logo Agencia Turismo">
+    </div>
+    <!--Menu-->
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active text-warning" aria-current="page" href="pacotes_promocionais.html">Pacotes Promocionais</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="contato.html">Contato</a>
+      </li>
+    </ul>
+  </header>
+
+  <section id="tabela_pacotes">
+    <div class="table-responsive">
+      <table class="table align-middle table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Período da Promoção</th>
+            <th scope="col">Destino</th>
+            <th scope="col">Descrição do Pacote</th>
+            <th scope="col">Local</th>
+            <th scope="col">Preço</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-light">
+            <th scope="row">1</th>
+            <td>01/09/2021 a 01/12/2021</td>
+            <td>Toronto</td>
+            <td>Viagem para Toronto no Canadá com tudo incluso e 8 diárias e pontos turísticos.</td>
+            <td><img class="img_modal" onclick="abrirModal(this)" src="_imagens/canada.jpg" alt="Toronto Canadá"></td>
+            <td>R$ 6.626,00</td>
+            <td><button type="button" class="btn btn-outline-success"><i class="bi bi-cart-plus"></i>Comprar</button></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>01/09/2021 a 01/12/2021</td>
+            <td>Roma</td>
+            <td>Viagem para Roma com tudo incluso e 16 diárias e pontos turísticos.</td>
+            <td><img class="img_modal" onclick="abrirModal(this)" src="_imagens/coliseu.jpg" alt="Coliseu"></td>
+            <td>R$ 7.190,00</td>
+            <td><button type="button" class="btn btn-outline-success"><i class="bi bi-cart-plus"></i>Comprar</button></td>
+          </tr>
+          <tr class="table-light">
+            <th scope="row">3</th>
+            <td>01/09/2021 a 01/12/2021</td>
+            <td>Nova Iorque</td>
+            <td>Viagem para Nova Iorque com tudo incluso e 4 diárias e pontos turísticos.</td>
+            <td><img class="img_modal" onclick="abrirModal(this)" src="_imagens/estatua-liberdade.png" alt="Estatua da Liberdade"></td>
+            <td>R$ 5.700,00</td>
+            <td><button type="button" class="btn btn-outline-success"><i class="bi bi-cart-plus"></i>Comprar</button></td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>01/09/2021 a 01/12/2021</td>
+            <td>Londres</td>
+            <td>Viagem para Londres com tudo incluso e 10 diárias e pontos turísticos.</td>
+            <td><img class="img_modal" onclick="abrirModal(this)" src="_imagens/london-bigben.jpg" alt="Big Ben Londres"></td>
+            <td>R$ 8.708,00</td>
+            <td><button type="button" class="btn btn-outline-success"><i class="bi bi-cart-plus"></i>Comprar</button></td>
+          </tr>
+          <tr class="table-light">
+            <th scope="row">5</th>
+            <td>01/09/2021 a 01/12/2021</td>
+            <td>Paris</td>
+            <td>Viagem para Paris com tudo incluso e 5 diárias e pontos turísticos.</td>
+            <td><img class="img_modal" onclick="abrirModal(this)" src="_imagens/torre-eiffel.jpg" alt="Torre Eiffel"></td>
+            <td>R$ 5.233,00</td>
+            <td><button type="button" class="btn btn-outline-success"><i class="bi bi-cart-plus"></i>Comprar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <a href="" class="link-danger"><i class="bi bi-youtube"></i></a>
+      <a href=""><i class="bi bi-facebook"></i></a>
+      <a href=""><i class="bi bi-instagram"></i></a>
+      <a href="" class="link-success"><i class="bi bi-whatsapp"></i></a>
+      <a href=""><i class="bi bi-telegram"></i></a>
+    </div>
+  </footer>
+
+  <!--Modal-->
+  <div class="fundo_modal" id="modal">
+		<div class="modal_tur">
+			<img id="imgmodal" src="" alt="">
+			<span onclick="fecharModal()">&times;</span>
+		</div>
+	</div>
+
+  <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="_javascript/script.js"></script>
+</body>
+</html>
